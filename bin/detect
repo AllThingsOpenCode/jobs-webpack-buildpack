@@ -1,13 +1,3 @@
 #!/bin/sh
-# -*- shell-script -*-
 
-# Assume this project uses webpack-rails gem if it depends
-# on the webpack-rails gem (or just mentions it).
-#
-# `grep` will set the significant exit code accordingly.
-
-echo "webpack"
-
-build_dir=$1
-
-ls | grep webpack
+exit 0
