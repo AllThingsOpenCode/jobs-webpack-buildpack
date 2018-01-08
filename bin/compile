@@ -30,13 +30,9 @@ export_env_dir() {
 
 export_env_dir
 
-echo "-----> gem install bundler"
-gem install bundler --no-document
-echo "-----> bundle install"
-bundle install -j4 --deployment
-echo "-----> npm install"
-npm install
-echo "-----> bundle exec rake webpack:compile"
-bundle exec rake webpack:compile --trace
-echo "-----> npm prune"
-npm prune
+echo "-----> yarn install"
+yarn install
+echo "-----> build styles"
+yarn build
+echo "-----> remove node_module"
+rm -rf node_modules
