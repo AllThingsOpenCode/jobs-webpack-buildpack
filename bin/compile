@@ -30,6 +30,8 @@ export_env_dir() {
 
 export_env_dir
 
+echo "-----> install yarn"
+curl -o- -L https://yarnpkg.com/install.sh | bash
 echo "-----> yarn install"
 yarn install
 echo "-----> build styles"
